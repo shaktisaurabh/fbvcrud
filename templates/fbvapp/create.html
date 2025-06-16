@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Project</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .form-container { max-width: 400px; margin: auto; }
+        label { display: block; margin-top: 15px; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create Student</h2>
+        <!-- Django form rendering -->
+        <form method="post">
+            <table>
+            {% csrf_token %}
+            {{ form.as_table }}
+            </table>
+            <input type="submit" value="Save">
+        </form>
+    </div>
+</body>
+</html>
